@@ -1,0 +1,19 @@
+
+<div *ngFor="let data of messagesData" class="messageContainer"
+    [ngClass]="{'isOwnMessageContainer':isOwnMessage}">
+    <div class="messageData"
+        [ngClass]="{'isOwnMessageData':isOwnMessage}">
+        <span class="sender"
+            [ngClass]="{'isOwnSender':isOwnMessage}">
+            {{data.email}}
+        </span>
+        <span class="timestamp" 
+            [ngClass] = "{'isOwnTimestamp':isOwnMessage}">
+            {{data.timeSent | date:'medium'}}
+        </span>
+    </div>
+    <div class="messageContent"
+        [ngClass]="{'isOwnMessageContent':isOwnMessage}">
+        {{data.msg}}
+    </div>
+</div>
