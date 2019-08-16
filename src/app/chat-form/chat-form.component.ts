@@ -17,7 +17,8 @@ export class ChatFormComponent implements OnInit {
     this.message = "";
   }
   handleSubmit(event) {
-    if (event.keyboard === 13) {
+    console.log(event)
+    if (event.keyCode === 13) {
       this.send()
     }
   }
